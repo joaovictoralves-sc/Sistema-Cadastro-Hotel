@@ -139,17 +139,71 @@ public class MainSistema {
 				    				
 				break;
 				
-			case 4:
-				
-				// Código de alterar reserva
-				
-				break;
-				
-			case 5:
-				
-				// Código de buscar reserva
-				
-				break;
+
+            case 4:
+                System.out.println("\n> ALTERAR RESERVA\n");
+
+                System.out.println("\nInforme o código da reserva que deseja alterar: ");
+                int codigoReservaAlterar = input.nextInt();
+                input.nextLine(); 
+
+                boolean reservaEncontradaAlterar = false;
+
+                for (Reserva reserva : cadastroReserva) {
+                    if (reserva.getCodigoReserva() == codigoReservaAlterar) {
+                        System.out.println("Informe o novo valor da reserva: ");
+                        float novoValor = input.nextFloat();
+                        input.nextLine(); 
+                        reserva.setValorReserva(novoValor);
+
+                        System.out.println("Informe a nova data e hora do check-in (dd/MM/yyyy hh:mm): ");
+                        String novaDataCheckIn = input.nextLine();
+                        reserva.setDataCheckIn(novaDataCheckIn);
+
+                        System.out.println("Informe a nova data e hora do check-out (dd/MM/yyyy hh:mm): ");
+                        String novaDataCheckOut = input.nextLine();
+                        reserva.setDataCheckOut(novaDataCheckOut);
+
+                        System.out.println("\n ==> Reserva alterada com sucesso! <==\n");
+                        reservaEncontradaAlterar = true;
+                        break; 
+                    }
+                }
+
+                if (!reservaEncontradaAlterar) {
+                    System.out.println("\n ==> Reserva não encontrada! <==\n");
+                }
+                break;
+
+            case 5:
+                System.out.println("\n> BUSCAR RESERVA\n");
+
+                System.out.println("\nInforme o código da reserva que deseja buscar: ");
+                int codigoReservaBuscar = input.nextInt();
+                input.nextLine(); 
+
+                boolean reservaEncontradaBusca = false;
+
+                for (Reserva reserva : cadastroReserva) {
+                    if (reserva.getCodigoReserva() == codigoReservaBuscar) {
+                        System.out.println("Reserva encontrada:");
+                        System.out.println("Código da reserva: " + reserva.getCodigoReserva());
+                        System.out.println("Nome do hóspede: " + reserva.getHospede().getNomeHospede());
+                        System.out.println("Número do quarto: " + reserva.getNumeroQuarto());
+                        System.out.println("Valor da reserva: " + reserva.getValorReserva());
+                        System.out.println("Data e hora do check-in: " + reserva.getDataCheckIn());
+                        System.out.println("Data e hora do check-out: " + reserva.getDataCheckOut());
+                        System.out.println();
+                        reservaEncontradaBusca = true;
+                        break; 
+                    }
+                }
+
+                if (!reservaEncontradaBusca) {
+                    System.out.println("\n ==> Reserva não encontrada! <==\n");
+                }
+                break;
+
 				
 			case 6:
 				
