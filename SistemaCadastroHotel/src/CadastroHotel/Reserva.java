@@ -4,11 +4,18 @@ public class Reserva {
 	
 	private Hospede hospede; 
 	private Integer numeroQuarto; 
-	private Integer valorReserva; 
+	private float valorReserva; 
 	private String dataCheckIn; 
 	private String dataCheckOut;
+	private Integer codigoReserva;
 	
 	
+	public int getCodigoReserva() {
+		return codigoReserva;
+	}
+	public void setCodigoReserva(Integer codigoReserva) {
+		this.codigoReserva = codigoReserva;
+	}
 	public Hospede getHospede() {
 		return hospede;
 	}
@@ -21,10 +28,10 @@ public class Reserva {
 	public void setNumeroQuarto(Integer numeroQuarto) {
 		this.numeroQuarto = numeroQuarto;
 	}
-	public Integer getValorReserva() {
+	public float getValorReserva() {
 		return valorReserva;
 	}
-	public void setValorReserva(Integer valorReserva) {
+	public void setValorReserva(float valorReserva) {
 		this.valorReserva = valorReserva;
 	}
 	public String getDataCheckIn() {
