@@ -1,4 +1,4 @@
-package CadastroHotel;
+package modelo;
 
 public class Hospede {
 	

@@ -1,10 +1,10 @@
-package CadastroHotel;
+package modelo;
 
 public class Reserva {
 	
 	private Hospede hospede; 
 	private Integer numeroQuarto; 
-	private float valorReserva; 
+	private double valorReserva; 
 	private String dataCheckIn; 
 	private String dataCheckOut;
 	private Integer codigoReserva;
@@ -28,10 +28,10 @@ public class Reserva {
 	public void setNumeroQuarto(Integer numeroQuarto) {
 		this.numeroQuarto = numeroQuarto;
 	}
-	public float getValorReserva() {
+	public double getValorReserva() {
 		return valorReserva;
 	}
-	public void setValorReserva(float valorReserva) {
+	public void setValorReserva(double valorReserva) {
 		this.valorReserva = valorReserva;
 	}
 	public String getDataCheckIn() {
