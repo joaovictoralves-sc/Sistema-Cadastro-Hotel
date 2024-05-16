@@ -1,8 +1,7 @@
 package modelo;
 
 public class Hospede {
-	
-	private String nomeHospede;
+    private String nomeHospede;
 
 	public String getNomeHospede() {
 		return nomeHospede;
@@ -11,8 +10,4 @@ public class Hospede {
 	public void setNomeHospede(String nomeHospede) {
 		this.nomeHospede = nomeHospede;
 	}
-
- 
-	
-
 }

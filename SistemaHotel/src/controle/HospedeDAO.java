@@ -1,5 +1,7 @@
 package controle;
 
-public class HospedeDAO {
+import modelo.Hospede;
 
+public interface HospedeDAO {
+    void cadastrarHospede(Hospede hospede);
 }

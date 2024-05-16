@@ -1,21 +1,12 @@
 package modelo;
 
 public class Reserva {
-	
-	private Hospede hospede; 
-	private Integer numeroQuarto; 
-	private double valorReserva; 
-	private String dataCheckIn; 
-	private String dataCheckOut;
-	private Integer codigoReserva;
-	
-	
-	public int getCodigoReserva() {
-		return codigoReserva;
-	}
-	public void setCodigoReserva(Integer codigoReserva) {
-		this.codigoReserva = codigoReserva;
-	}
+    private Hospede hospede; 
+    private Integer numeroQuarto; 
+    private double valorReserva; 
+    private String dataCheckIn; 
+    private String dataCheckOut;
+    private Integer codigoReserva;
 	public Hospede getHospede() {
 		return hospede;
 	}
@@ -45,9 +36,11 @@ public class Reserva {
 	}
 	public void setDataCheckOut(String dataCheckOut) {
 		this.dataCheckOut = dataCheckOut;
-	} 
-
-	
-	 
-
+	}
+	public Integer getCodigoReserva() {
+		return codigoReserva;
+	}
+	public void setCodigoReserva(Integer codigoReserva) {
+		this.codigoReserva = codigoReserva;
+	}
 }
